@@ -1,10 +1,53 @@
 # NextJS Assessment
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project is made using [Next.js](https://nextjs.org/) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## About this Project
 
-First, run the development server:
+This project contains two screens. We will be diving deep into both of the screens and what it does:
+
+#### First Screen (Login Screen)
+The first screen consists of the login screen, where both the name and email are hard-coded and disabled.
+User are only allowed to enter their password.
+The password field is hidden at first, but will be made visible if the user clicks on the eye icon.
+There are several checks/requirements for the password before the user is allowed to continue:
+
+1. Contains at least 8 characters.
+2. Contains both lowercase and uppercase characters.
+3. Contains at least 1 symbol.
+
+There is a strength indicator that will dynamnically update based on the input by the user.
+Once the criterias are fuffilled, the Continue button will be enabled and the user are allowed to proceed.
+
+---
+
+#### Second Screen (Risk Graph Screen)
+In this screen, the user are presented with a set of labels (which can be added under riskGraphConstants.ts), where they are allowed to drag-and-drop the labels onto the graph/image/element presented. Upon dragging, the user will be prompted a floating banner which tells the user the coordinates of which the label has been placed.
+
+
+### Showcase
+
+The showcase can be found on [Google Drive](https://drive.google.com/file/d/1AxB3EdkaKvxjhF-JhC7dlJgsIxMtnoEg/view?usp=share_link) (tried to upload to GitHub but file is too large).
+
+
+You may also visit the live demo [here](https://dylan-next-js-assessment.vercel.app/).
+
+| UI Illustration  | Development |
+| ------------- | ------------- |
+| <img src="https://user-images.githubusercontent.com/16792330/221594820-ad06b037-5c2b-4d48-aa3d-73fac7a2375d.png" width=400 /> | <img src="https://user-images.githubusercontent.com/16792330/221595473-2739eb0b-7814-4dff-812e-8d7ea22090e2.png" width=400 /> |
+| <img src="https://user-images.githubusercontent.com/16792330/221596539-a68418c2-327c-4a23-ad7b-b25dc5934882.png" width=400 /> | <img src="https://user-images.githubusercontent.com/16792330/221596589-60b839f4-e656-40df-baee-043ff0f283cd.png" width=400 /> |
+
+
+
+## Checking Out Locally
+
+First, let's run the following to ensure all libaries are retrieved and up-to-date:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -16,25 +59,21 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Findings and Thought Process
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. To ensure the similarity to the UI Illustration screens, I did some Googling to make sure the background image, logo and font was similar. I did reference from the login from GIFT.ed directly.
+2. Researched on the libraries that will be revelant to the tasks.
+4. I decided to go with NextJS as it would be a good oppurtunity to get hands on with this framework.
+5. I've added test specs for the login screens, mainly to ensure that the password strength indiciator styling and password requirements check goes as expected.
+6. The designs were added first, and the logic comes later.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Limitations
 
-## Learn More
+1. The fonts declaration can be imported better. Right now it's declared in every file and its becoming tedious to declare the same type every screen. I have not explore on this limitation yet, but I've tried to include it in a separate file but it did not work.
+2. The requirement for the second question (When user drop the label into one of the boxes, an unique message that mapped to the
+box will be displayed) was not met since the element of the middle area could be an image, so there was no proper way to map each boxes when it's an image.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
