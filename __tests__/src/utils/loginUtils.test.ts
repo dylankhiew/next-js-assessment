@@ -1,5 +1,5 @@
 import { app } from "@/typings";
-import { checkPasswordStrength, generateTrailingBarStyle } from "../src/utils/loginUtils";
+import { checkPasswordStrength, generateTrailingBarStyle } from "../../../src/utils/loginUtils";
 
 describe('Util :: loginUtils', () => {
   describe('generateTrailingBarStyle', () => {
