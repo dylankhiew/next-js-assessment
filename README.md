@@ -2,6 +2,8 @@
 
 This project is made using [Next.js](https://nextjs.org/) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+---
+
 ## About this Project
 
 This project contains two screens. We will be diving deep into both of the screens and what it does:
@@ -19,11 +21,11 @@ There are several checks/requirements for the password before the user is allowe
 There is a strength indicator that will dynamnically update based on the input by the user.
 Once the criterias are fuffilled, the Continue button will be enabled and the user are allowed to proceed.
 
----
 
 #### Second Screen (Risk Graph Screen)
 In this screen, the user are presented with a set of labels (which can be added under riskGraphConstants.ts), where they are allowed to drag-and-drop the labels onto the graph/image/element presented. Upon dragging, the user will be prompted a floating banner which tells the user the coordinates of which the label has been placed.
 
+---
 
 ### Showcase
 
@@ -37,7 +39,7 @@ You may also visit the live demo [here](https://dylan-next-js-assessment.vercel.
 | <img src="https://user-images.githubusercontent.com/16792330/221594820-ad06b037-5c2b-4d48-aa3d-73fac7a2375d.png" width=400 /> | <img src="https://user-images.githubusercontent.com/16792330/221595473-2739eb0b-7814-4dff-812e-8d7ea22090e2.png" width=400 /> |
 | <img src="https://user-images.githubusercontent.com/16792330/221596539-a68418c2-327c-4a23-ad7b-b25dc5934882.png" width=400 /> | <img src="https://user-images.githubusercontent.com/16792330/221596589-60b839f4-e656-40df-baee-043ff0f283cd.png" width=400 /> |
 
-
+---
 
 ## Checking Out Locally
 
