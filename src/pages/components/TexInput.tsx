@@ -63,7 +63,7 @@ export default function TextInput({
   disabled,
 }: TextInputProps): JSX.Element {
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
-  const { passwordStrength, setPasswordStrength } = useContext<app.PasswordContextType>(PasswordContext);
+  const { setPasswordStrength } = useContext<app.PasswordContextType>(PasswordContext);
 
   const renderEyeIcon = () => {
     if (inputType === 'password') {
