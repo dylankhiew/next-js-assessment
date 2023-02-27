@@ -9,7 +9,7 @@ import RiskGraphContext from '@/context/riskGraphContext';
 import Header from '../components/Header';
 import RiskGraphMiddleArea from '../components/RiskGraphMiddleArea';
 import RiskGraphLabel from '../components/RiskGraphLabel';
-import { RISK_GRAPH_LABELS } from './constants/riskGraphConstants';
+import { RISK_GRAPH_LABELS } from '../../constants/riskGraphConstants';
 
 const bitterBold = Bitter({
   subsets: ['latin'],
