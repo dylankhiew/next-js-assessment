@@ -1,7 +1,7 @@
 import { app } from '@/typings';
 import React from 'react';
 
-export const INITIAL_CONTEXT: app.PasswordContextType = {
+export const INITIAL_PASSWORD_CONTEXT: app.PasswordContextType = {
   passwordStrength: {
     qualifiedEntries: 0,
     isPasswordStrong: false,
@@ -9,6 +9,6 @@ export const INITIAL_CONTEXT: app.PasswordContextType = {
   setPasswordStrength: () => {},
 };
 
-const PasswordContext = React.createContext<app.PasswordContextType>(INITIAL_CONTEXT);
+const PasswordContext = React.createContext<app.PasswordContextType>(INITIAL_PASSWORD_CONTEXT);
 
 export default PasswordContext;
